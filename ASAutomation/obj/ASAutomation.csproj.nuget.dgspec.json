@@ -44,6 +44,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "KeePassLib": {
+              "target": "Package",
+              "version": "[2.30.0, )"
+            },
             "Selenium.WebDriver": {
               "target": "Package",
               "version": "[4.39.0, )"

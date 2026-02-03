@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="KeePassLib" Version="2.30.0" />
     <PackageReference Include="Selenium.WebDriver" Version="4.39.0" />
   </ItemGroup>
 

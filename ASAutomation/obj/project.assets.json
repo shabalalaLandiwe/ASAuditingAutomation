@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net9.0": {
+      "KeePassLib/2.30.0": {
+        "type": "package",
+        "compile": {
+          "lib/KeePassLib.dll": {}
+        },
+        "runtime": {
+          "lib/KeePassLib.dll": {}
+        }
+      },
       "Selenium.WebDriver/4.39.0": {
         "type": "package",
         "compile": {
@@ -35,6 +44,19 @@
     }
   },
   "libraries": {
+    "KeePassLib/2.30.0": {
+      "sha512": "Mz1xhQv7gn0HercFMV1+qzwy+zH2EZF9umV/93pB8LSfixrv2gJJEgW9SCtasNZOFl7vGAUrCL+M3ZC1030YUA==",
+      "type": "package",
+      "path": "keepasslib/2.30.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "keepasslib.2.30.0.nupkg.sha512",
+        "keepasslib.nuspec",
+        "lib/KeePassLib.dll",
+        "lib/KeePassLib.xml"
+      ]
+    },
     "Selenium.WebDriver/4.39.0": {
       "sha512": "LbiWOVW/PA/YVHKAXxMPLwwoupj3XLWKwjnGNkGFF0dG0rX2MJHDWgSf9WPSRWb9Msr3vTWFg0EsEAdNs68NiA==",
       "type": "package",
@@ -62,6 +84,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "KeePassLib >= 2.30.0",
       "Selenium.WebDriver >= 4.39.0"
     ]
   },
@@ -108,6 +131,10 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "KeePassLib": {
+            "target": "Package",
+            "version": "[2.30.0, )"
+          },
           "Selenium.WebDriver": {
             "target": "Package",
             "version": "[4.39.0, )"
@@ -132,5 +159,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.309/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'KeePassLib 2.30.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
+      "libraryId": "KeePassLib",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }
